@@ -5,24 +5,22 @@ import org.example.demo.ticket.business.manager.TicketManager;
 
 public class ManagerFactory {
 
-    private static final ManagerFactory INSTANCE = new ManagerFactory();
-
-    public ManagerFactory() {
-        super();
-    }
-
-    public static ManagerFactory getInstance() {
-        return ManagerFactory.INSTANCE;
-    }
+    private ProjetManager projetManager;
+    private TicketManager ticketManager;
 
     public ProjetManager getProjetManager() {
-        return new ProjetManager();
+        return projetManager;
+    }
+
+    public void setProjetManager(ProjetManager pProjetManager) {
+        projetManager = pProjetManager;
     }
 
     public TicketManager getTicketManager() {
-        return new TicketManager();
+        return ticketManager;
     }
 
-
-
+    public void setTicketManager(TicketManager tTicketManager) {
+        ticketManager = tTicketManager;
+    }
 }
